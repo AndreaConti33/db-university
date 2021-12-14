@@ -133,3 +133,8 @@ insert into courses  (name, description, website, cfu) values ('Geografia', 'Dal
 insert into teachers (name, surname, phone, email, office_address) values ('Jhon', 'Snow', '8290384937', 'iwejfiw@gmail.com', 'Viale Mazzini 1, Lucca');
 insert into teachers (name, surname, phone, email, office_address) values ('Jhon', 'Snow', '8290384937', 'iwejfiw@gmail.com', 'Viale Mazzini 1, Lucca');
 insert into teachers (name, surname, phone, email, office_address) values ('Jhon', 'Snow', '8290384937', 'iwejfiw@gmail.com', 'Viale Mazzini 1, Lucca');
+
+-- Teachers_Courses
+insert into teachers_courses (teachers_id, courses_id) values (1,1);
+insert into teachers_courses (teachers_id, courses_id) values (2,2);
+insert into teachers_courses (teachers_id, courses_id) values (3,3);
