@@ -60,11 +60,13 @@ create table `courses` (
 `name` varchar(100) not null,
 `description` varchar(255),
 `website` varchar(100) not null,
-`cfu` int not null,
+`cfu` bit not null,
 `degrees_id` int,
 primary key (`id`),
 foreign key (`degrees_id`) references `degrees` (`id`)
 );
+
+alter table courses modify cfu int;
 
 -- Tabella ponte Student_Exams
 create table `vote` (
@@ -85,6 +87,15 @@ create table `teachers` (
 `email` varchar(100) not null,
 `office_address` varchar(255),
 primary key (`id`)
+);
+
+-- Tabella teachers_courses
+create table `teachers_courses` (
+`teachers_id` INT not null,
+`courses_id` INT not null,
+primary key(`teachers_id`, `courses_id`),
+foreign key(`teachers_id`) references `teachers`(`id`),
+foreign key(`courses_id`) references `courses`(`id`)
 );
 
 -- Dati
